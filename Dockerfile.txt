@@ -1,0 +1,7 @@
+FROM centos:7
+
+LABEL author "Abhilash"
+LABEL DESCRIPTION " This is my first docker file" 
+RUN apt-get update && apt-get install httpd
+RUN echo "<h1> hello world" > /usr/share/nginx/html/index.html
+CMD httpd -FOREGROUND 
